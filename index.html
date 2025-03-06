@@ -30,6 +30,14 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+    <script>
+        if (location.pathname.startsWith('/crudnet/') && !location.pathname.endsWith('.html')) {
+            const newPath = '/crudnet/index.html' + location.search + location.hash;
+            history.replaceState(null, '', newPath);
+            location.reload();
+        }
+    </script>
+
     <script src="_framework/blazor.webassembly.js"></script>
     <script src="_content/MudBlazor/MudBlazor.min.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
