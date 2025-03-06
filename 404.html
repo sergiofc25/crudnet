@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Redireccionando...</title>
+    <script>
+        // Redirige todas las rutas desconocidas a index.html
+        sessionStorage.redirect = location.pathname;
+        window.location.href = "/crudnet/";
+    </script>
+</head>
+<body>
+    <p>Redireccionando...</p>
+</body>
+</html>
